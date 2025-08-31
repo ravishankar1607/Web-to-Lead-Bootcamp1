@@ -6,6 +6,7 @@
     <title>Web To Lead Form</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <h1>Create Lead</h1>
@@ -16,6 +17,11 @@
     >
       <input type="hidden" name="oid" value="00D7F000004dlyg" />
       <input type="hidden" name="Lead_Date__c" class="outputdate" />
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"WebToLeadBootcamp","fallback":"true","orgId":"00D7F000004dlyg","ts":""}'
+      />
 
       <input
         type="hidden"
@@ -55,14 +61,11 @@
 
       <label for="lead_date">Lead Date</label>
       <input type="date" class="inputdate" />
-      <!--Lead Date:<span class="dateInput dateOnlyInput"
-        ><input
-          id="00NGA00000dGYzW"
-          name="00NGA00000dGYzW"
-          size="12"
-          type="text" /></span
-      ><br />-->
-
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LeTZrkrAAAAAEXgwoQQG9TKY2VRf6Uzcd-nglvP"
+      ></div>
+      <br />
       <input type="submit" class="submit" name="submit" />
     </form>
   </body>
